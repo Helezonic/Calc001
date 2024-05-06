@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="calculator.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+    <div class="containerOne">
+      <div class="verdict">
+        <p>SELF EVALUATION. <br>The current calculator code has issues like
+          <li>Inability to incorporate BODMAS logic [requires operator and operand stack and using Shunt Yard Algorithm]</li>
+          <li>Some minor error issues like : if started with operator then can end up in NaN</li>
+          <li>Cant include negative numbers for multiplication and division</li>
+          <li>Use of brackets not included</li>
+          <li>onkeydown can be used only on focussable elements(input field) or tabbable fields. The display here is a p element</li>
+          <li>The delete key that deletes last pressed character is not there.</li>
+          <br><strong><em>THERE ALREADY EXISTS A FUNCTION 'math.evaluate()' and 'eval()' THAT SOLVES BODMAS AND NEGATIVE INTEGER ISSUES. But math.evaluate()is from Math.js library and not inbuilt and eval() is inbuilt but not recommended due to security issues.</strong></em>
+        </p>
+        <p id="other-points">
+          <em>Other Points</em>
+          <li>For buttons, you can also use "input type=button", but button element is preferred.</li>
+          <li>The width of the calculator can be fixed and the buttons can be justified 'space even' accordingly. Or you can remove width and flex justification and add button margins for spacing.</li>
+          <li>Usage of 4x4 grid vs 4 flexboxes vs table element</li>
+          <br>This is purely a heavy vanilla javascript based code with no  external library. The HTML structure is minimal with just button elements with no attributes. <br>A more HTML heavy with input elements and attributes can be used to achieve this with less javascript.
+        </p>
+      </div>
+      <div class="calculator-body">
+        <div class="display">
+          <p id="js-dis-top"></p>
+          <p id="js-dis-main"></p>
+        </div>
+        <div class="buttons">
+          <div class="row one">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="js-op">+</button>
+            <button class="js-op">/</button>
+          </div>
+          <div class="row two">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="js-op">-</button>
+            <button class="js-op">*</button>
+          </div>
+          <div class="row three">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="js-op"></button>
+            <button class="js-op"></button>
+            
+          </div>
+          <div class="row four">
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="js-res">=</button>
+            <button class="js-res">C</button>
+          </div>
+        </div>
+      </div>
+      
+     
+    </div>
+    <div class="containerTwo">
+      <div class="gemini">
+        <p><strong>Gemini Response</strong><br><br> Vanilla JavaScript (without a framework):<li>
+          Ternary Operator: You can use the ternary operator (condition ? expressionIfTrue : expressionIfFalse) in actionWithKeys for simpler logic:</li>
+        <li>Default Parameters: For optional values like operand in actionWithKeys, you can use default parameters:</li>
+        <li>Object Literals: Consider using objects to store operator functions for cleaner code:</li>
+        <li>Arrow Functions: Replace some regular function expressions with arrow functions for conciseness:</li></p>
+      </div>
+      <img height="500px" src="Gemini Rating.png"/>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
