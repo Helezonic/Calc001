@@ -7,7 +7,7 @@
 .containerOne, .containerTwo{
   margin: 0px; padding: 0px;
   height: 100vh; width: 100%;
-  background-color: blueviolet;
+  background-color: rgb(155, 56, 201);
   box-sizing: border-box;
 }
 
